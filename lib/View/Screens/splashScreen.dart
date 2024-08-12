@@ -18,10 +18,14 @@ class SplashPage extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Container(
-        height: h * 1,
-        width: w * 1,
-        child: LottieBuilder.asset('asset/AnimationJson/splash.json'),
+      body: Center(
+        child: Container(
+          height: h * 0.1,
+          width: w * 0.51,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/check_6972727.png'))),
+        ),
       ),
     );
   }
