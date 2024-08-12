@@ -4,6 +4,7 @@ import 'package:minimal_habit_tracker/Provider/ThemeProvider.dart';
 import 'package:provider/provider.dart';
 
 import 'View/Screens/HomeScreen.dart';
+import 'View/Screens/splashScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: Provider.of<ThemeProvider>(context).themeData,
         routes: {
-          '/': (context) => const HomePage(),
+          '/': (context) => const SplashPage(),
+          '/home': (context) => const HomePage(),
         },
       ),
     );
